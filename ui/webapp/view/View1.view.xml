@@ -1,0 +1,20 @@
+<mvc:View controllerName="sit.ui.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:layout="sap.ui.layout">
+	<App id="idAppControl">
+		<pages>
+			<Page title="The most advanced business app">
+				<content>
+					<SearchField width="100%" search="search"/>
+					<layout:Grid content="{images>/images}">
+						<layout:content>
+							<VBox>
+								<Image src="{images>url}" width="300px"/>
+								<Title text="{images>description}"/>
+							</VBox>
+						</layout:content>
+					</layout:Grid>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

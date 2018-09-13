@@ -1,0 +1,42 @@
+ID: sit99
+_schema-version: '3.1'
+version: 0.0.1
+modules:
+  - name: server
+    type: nodejs
+    path: server
+    parameters:
+      memory: 256M
+    provides:
+      - name: server_api
+        properties:
+          url: '${default-url}'
+  - name: ui
+    type: html5
+    path: ui
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    build-parameters:
+      builder: grunt
+    requires:
+      - name: uaa_sit99
+      - name: dest_sit99
+      - name: server_api
+        group: destinations
+        properties:
+          name: server
+          url: '~{url}'
+          forwardAuthToken: true
+resources:
+  - name: uaa_sit99
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+  - name: dest_sit99
+    parameters:
+      service-plan: lite
+      service: destination
+    type: org.cloudfoundry.managed-service
