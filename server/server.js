@@ -6,7 +6,7 @@ var port = process.env.PORT || 3000;
 
 var images = {
 	images: [{
-		url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjr08KIx7jdAhWBGJAKHZNgDqkQjRx6BAgBEAU&url=https%3A%2F%2Fwww.austinpetsalive.org%2Fadopt%2Fcats%2F&psig=AOvVaw1PG6YHyzy6Th6IDM6Ic_gc&ust=1536947834426625",
+		url: "https://www.scarymommy.com/wp-content/uploads/2018/01/c1.jpg?w=700",
 		description: "cat"
 	}]
 };

@@ -8,8 +8,6 @@
 	"scripts": {
 		"build": "cds build --clean"
 	},
-	"cds": {
-		
-	},
+	"cds": {},
 	"private": true
 }
